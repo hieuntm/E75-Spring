@@ -1,0 +1,40 @@
+@Configuration -> Nói cho spring biết là, class này chứa các bean
+@Bean -> Nói cho spring biết là, method này là bean
+
+@Component -> Nói cho spring biết là class này là bean
+//
+@Service -> Là bean đặc biệt, theo phương diện tên gọi
+-> Đây là 1 bean liên quan đến logic
+@Repository -> tương tự
+-> Đây là 1 bean liên quan đến data -> dao (data access object)
+- 2 thằng trên (Service, Repository) có thể dùng thay thế bằng @Component được
+
+@RestController = @Controller + @ResponseBody
+@Controller -> trả về view, giống jsp
+-> Nơi nhận request và trả response thôi
+
+
+@GetMapping -> Đây là api get
+@PostMapping -> Api Post
+@PutMapping -> Api PUT
+@DeleteMapping -> Api Delete
+
+@RequestMapping -> tổng/ dùng thay thế cho GetMapping được
+-> dùng @, annotation
+
+-> Khi mà phát triển bằng restAPI, chúng ta thiết kế theo kiểu layer (từng tầng)
+
+Gọi API -> @Controller -> @Service -> @Repository -> (trả về)@Service -> (trả về)@Controller
+-> trả về response cho nguời dùng
+
+-> Bản chất của restful là request và response (biểu diễn dưới dạng json (xml optional))
+Dựa trên các method là POST, PUT, GET, DELETE
+
+-> GET với cả POST khác nhau như nào
+GET không có request body, dữ liệu chỉ đẩy ở url tức là path variable, thông thường chỉ nên để 1
+giới hạn độ dài của url ví dụ: 2000 ký tự, chẳng may param dài 2000 thì làm sao
+POST có request body, nên là body chứa dạng json nên bao nhiêu dữ liệu cũng được
+
+
+-> Ngta sử dụng PUT thay POST, PUT thay GET, PUT thay delete
+chỉ dùng 1 method PUT (optional, linh hoạt, tuỳ vào yêu cầu)

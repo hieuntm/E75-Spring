@@ -1,0 +1,16 @@
+B1: Thường thì tạo Entity, tạo 1 class Java liên quan đến modal
+- Constructor, getter, setter
+- Đánh entity, đánh id, auto_increment
+
+B2: Code đến Repository
+
+B3: Code đến service, nhúng repository vào
+
+B4: Code đến controller, nhúng service vào
+
+// Config database,
+spring.datasource.url=jdbc:mysql://localhost:3306/spring
+# url + database name
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.jpa.hibernate.ddl-auto=create
