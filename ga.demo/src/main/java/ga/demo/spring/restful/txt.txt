@@ -1,0 +1,23 @@
+RE S T
+// representational state transfer
+// đổi trạng thái thể hiện/ đại diện
+// Sử dụng method để thể hiện cho sự biến đổi dữ liệu
+// POST -> Tạo
+// PUT/PATCH -> Sửa
+// GET -> Lấy
+// DELETE -> Xoá
+// Trong quá trình phát triển, có thể biến đỏi nó đi
+// Tức là PUT có thể dùng để tạo
+// GET để xoá
+// Sự linh hoạt, và đảm bảo theo yêu cầu phát triển
+
+// Đối với spring boot khi mà phát triển API/ RestfulAPI
+// đi 3 tầng Controller -> Service -> Repository (DAO)
+
+// Controller -> Service -> Repository
+// Controller <- Service <- Repository
+
+// Controller là nơi để tiếp nhận request rồi trả về response
+// Service là nơi để tập trung logic
+// Repository (DAO) là nơi để liên quan đến việc xử lý data
+// -> Query: Select, insert, delete, update
