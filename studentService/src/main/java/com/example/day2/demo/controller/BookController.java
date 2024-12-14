@@ -10,9 +10,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/books")
 ///api/v1/books -> requestMapping -> api getAll (thì GetMapping ở phía dứoi, ko cần path)
+// useEffect gọi api set vào list
 ///api/v1/books/{id} -> GetMapping (Lấy ra 1 book)
+// Detail 1 sản phẩm nào đấy, tức là ở list trên chỉ hiện ra thông tin cơ bản
+// Khi click vào thì sẽ hiển thị chi tiết
 ///api/v1/books/{id} -> DeleteMapping (Xoá 1 book theo id)
+// CHo admin quản lý
 ///api/v1/books{id} + bodyRequest -> PutMapping -> Update book theo id
+// Cho admin quản lý
 ///api/v1/books + bodyRequest -> PutMapping -> Update book theo id trong body
 
 ///api/v1/books -> PostMapping -> Tạo mới sách

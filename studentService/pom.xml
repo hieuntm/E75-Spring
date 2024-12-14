@@ -46,6 +46,24 @@
 			<scope>runtime</scope>
 		</dependency>
 
+<!--		Second, verify that the option check-box File->Setting –>
+ Build, Execution, Deployment –> Compiler–>Build project automatically
+ is selected.-->
+<!--		Có nút gì đấy để config cho tự rerun khi có code sửa-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+<!-- giảm thời gian code, giảm boiler code		-->
+
 	</dependencies>
 
 	<build>
@@ -53,6 +71,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

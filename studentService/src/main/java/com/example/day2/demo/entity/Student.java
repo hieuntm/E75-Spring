@@ -15,7 +15,7 @@ public class Student {
     // Spring data JPA -> Dựa vào 2 thằng trên
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "name")
